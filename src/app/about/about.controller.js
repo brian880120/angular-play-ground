@@ -4,10 +4,11 @@
         .controller('routerApp.about.AboutController', AboutController);
 
     AboutController.$inject = [
-        'routerApp.core.CoreService'
+        'routerApp.core.CoreService',
+        'routerApp.core.CoreFactory'
     ];
 
-    function AboutController(CoreService) {
+    function AboutController(CoreService, CoreFactory) {
         var vm = this;
         vm.test = test;
         vm.scotches = [
