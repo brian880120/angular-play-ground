@@ -1,0 +1,15 @@
+<div>
+    <ul>
+        <li data-ng-repeat="cust in vm.customers"
+            data-delay-bind="{{::cust.street}}"
+            attribute="title"
+            trigger="mouseenter">
+            <a data-delay-bind="{{::cust.url}}"
+                data-attribute="href"
+                data-trigger="mouseenter">
+                {{cust.name}}
+            </a>
+        </li>
+    </ul>
+    <div>Total Customers: {{::vm.customers.length}}</div>
+</div>

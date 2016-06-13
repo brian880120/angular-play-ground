@@ -1,0 +1,21 @@
+{
+  "name": "facebook_app",
+  "version": "0.0.0",
+  "authors": [
+    "brian880120 <bobriandai@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.6",
+    "angular-ui-router": "~0.3.1",
+    "bootstrap": "~3.3.6",
+    "font-awesome": "~4.6.3"
+  }
+}

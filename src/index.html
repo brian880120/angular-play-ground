@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/libraries.css">
+    </head>
+    <body data-ng-app="routerApp">
+        <nav class="navbar navbar-inverse" data-role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" data-ui-sref="#">AngularUI Router</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a data-ui-sref="home">Home</a></li>
+                <li><a data-ui-sref="tableHelper">TableHelper</a></li>
+                <li><a data-ui-sref="about">About</a></li>
+            </ul>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <div class="container">
+            <div data-ui-view></div>
+        </div>
+        <script src="libraries.js"></script>
+        <script src="application.js"></script>
+        <script src="templates/templates.run.js"></script>
+    </body>
+</html>
