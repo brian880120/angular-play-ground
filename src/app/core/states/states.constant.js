@@ -8,6 +8,8 @@
             HOME_PARAGRAPH: 'home.paragraph',
             ABOUT: 'about',
 
-            TABLE_HELPER: 'tableHelper'
+            PLAY_GROUND: 'playGround',
+            DELAY_BIND: 'playGround.delayBind',
+            DIGEST: 'playGround.digest'
         });
 })(angular);

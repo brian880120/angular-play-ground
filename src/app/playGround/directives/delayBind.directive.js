@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    angular.module('routerApp.tableHelper')
+    angular.module('routerApp.playGround')
         .directive('delayBind', DelayBindDirective);
 
     DelayBindDirective.$inject = [

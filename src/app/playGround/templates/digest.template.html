@@ -1,0 +1,12 @@
+<h1>Using $scope.$digest() as a performance optimization in angularjs</h1>
+
+<p data-ng-mouseenter="vm.setIsHot(true)"
+    data-ng-mouseleave="vm.setIsHot(false)"
+    data-ng-class="{hot: isHot}">
+    $apply()
+</p>
+
+<p data-bn-digest
+    data-ng-class="{hot: localIsHot}">
+    $digest()
+</p>

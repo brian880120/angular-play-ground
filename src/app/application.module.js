@@ -5,6 +5,6 @@
         'routerApp.core',
         'routerApp.home',
         'routerApp.about',
-        'routerApp.tableHelper'
+        'routerApp.playGround'
     ]);
 }());
