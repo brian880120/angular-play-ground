@@ -1,0 +1,20 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">{{user.name}}</div>
+    <div class="panel-body">
+        <data-user-address data-user="user"></data-user-address>
+        <h4>Friends: </h4>
+        <ul>
+            <li data-ng-repeat="friend in user.friends">
+                {{friend}}
+            </li>
+        </ul>
+        <div data-ng-if="user.rank">
+            Rank: {{user.rank}}
+        </div>
+        <button class="btn btn-success"
+                data-ng-click="knightMe()"
+                data-ng-if="!user.rank">
+                Knight Me
+        </button>
+    </div>
+</div>

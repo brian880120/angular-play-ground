@@ -9,7 +9,6 @@
             ABOUT: 'about',
 
             PLAY_GROUND: 'playGround',
-            DELAY_BIND: 'playGround.delayBind',
-            DIGEST: 'playGround.digest'
+            DELAY_BIND: 'playGround.delayBind'
         });
 })(angular);

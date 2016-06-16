@@ -21,13 +21,6 @@
                     url: '',
                     component: 'delayBind'
                 }
-            }, {
-                state: StatesConstant.DIGEST,
-                config: {
-                    url: '',
-                    templateUrl: 'playGround/templates/digest.template.html',
-                    controller: 'routerApp.playGround.PlayGroundController as vm'
-                } 
             }
         ];
         StatesProvider.configureStates(states);

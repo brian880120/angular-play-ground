@@ -33,5 +33,6 @@
     gulp.task('server', server.task);
     gulp.task('server:reload', server.reload);
     gulp.task('server:watch:html:index', server.watch.html.index.task);
+    gulp.task('server:watch:html:templates', server.watch.html.templates.task);
     gulp.task('server:watch:javascript:application', server.watch.javascript.application);
 })();

@@ -14,6 +14,9 @@ module.exports = (function () {
             html: {
                 index: {
                     task: watchIndex
+                },
+                templates: {
+                    task: watchTemplates
                 }
             },
             javascript: {
@@ -54,6 +57,12 @@ module.exports = (function () {
                 })
             );
 
+            watch (
+                'src/app/**/*.html',
+                batch (function (events, callback) {
+                    gulp.start('server:watch:html:templates', callback);
+                })
+            )
             callback();
         };
     }
@@ -61,6 +70,14 @@ module.exports = (function () {
     function watchIndex (callback) {
         runSequence (
             'build:html:index',
+            'server:reload',
+            callback
+        );
+    }
+
+    function watchTemplates (callback) {
+        runSequence (
+            'build:html:template',
             'server:reload',
             callback
         );

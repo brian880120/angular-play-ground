@@ -4,10 +4,9 @@
         .controller('routerApp.playGround.PlayGroundController', PlayGroundController);
 
     PlayGroundController.$inject = [
-        '$scope',
         '$timeout'
     ];
-    function PlayGroundController($scope, $timeout) {
+    function PlayGroundController($timeout) {
         var vm = this;
         vm.customers = [
             {
@@ -16,19 +15,19 @@
                 url: 'url1'
             }
         ];
-        $scope.$watch(function() {
-            console.log('Top-level digest 1.');
-        });
-        $scope.$watch(function() {
-            console.log('Top-level digest 2.');
-        });
-        $scope.$watch(function() {
-            console.log('Top-level digest 3.');
-        });
 
-        vm.isHot = false;
-        vm.setIsHot = function(newIsHot) {
-            vm.isHot = newIsHot;
+        vm.user = {
+            name: 'Luke Skywalker',
+            address: {
+                street: 'PO Box 123',
+                city: 'Secret Rebel Base',
+                planet: 'Yavin 4'
+            },
+            friends: [
+                'Han',
+                'Leia',
+                'Chewbacca'
+            ]
         };
     }
 }());
