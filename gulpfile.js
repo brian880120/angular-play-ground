@@ -10,6 +10,7 @@
     var javascript = require('./gulp/javascript');
     var server = require('./gulp/server');
     var tasks = require('./gulp/tasks');
+    var fonts = require('./gulp/fonts');
 
     // =========================================================================
     // Default tasks
@@ -26,6 +27,7 @@
     gulp.task('build:javascript:application', javascript.build.application);
     gulp.task('build:javascript:vendor', javascript.build.vendor);
     gulp.task('build:stylesheet:vendor', stylesheet.build.vendor);
+    gulp.task('build:fonts', fonts.build);
 
     // =========================================================================
     // Server tasks

@@ -15,7 +15,6 @@ module.exports = (function () {
 
     function defaultTask (callback) {
         runSequence (
-            'clean',
             'build',
             'server',
             callback
@@ -29,6 +28,7 @@ module.exports = (function () {
                 'build:javascript:vendor',
                 'build:javascript:application'
             ],
+            'build:fonts',
             'build:html:template',
             'build:html:index',
             callback

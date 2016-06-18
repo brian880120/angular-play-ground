@@ -16,8 +16,21 @@
             }
         ];
 
-        vm.user = {
+        vm.user1 = {
             name: 'Luke Skywalker',
+            address: {
+                street: 'PO Box 123',
+                city: 'Secret Rebel Base',
+                planet: 'Yavin 4'
+            },
+            friends: [
+                'Han',
+                'Leia',
+                'Chewbacca'
+            ]
+        };
+        vm.user2 = {
+            name: 'Han',
             address: {
                 street: 'PO Box 123',
                 city: 'Secret Rebel Base',

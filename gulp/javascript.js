@@ -7,6 +7,7 @@ module.exports = (function () {
     var gutil = require('gulp-util');
     var mainBowerFiles = require('gulp-main-bower-files');
     var gulpfilter = require('gulp-filter');
+    var $ = require('gulp-load-plugins')();
 
     return {
         build: {
@@ -21,6 +22,7 @@ module.exports = (function () {
                 'src/app/**/*.module.js',
                 'src/app/**/*.js'
             ])
+            .pipe($.newer('dist/application.js'))
             .pipe(uglify().on('error', gutil.log))
             .pipe(concat('application.js'))
             .pipe(gulp.dest('dist/'));
@@ -29,6 +31,7 @@ module.exports = (function () {
     function buildVendor () {
         return gulp.src('bower.json')
             .pipe(mainBowerFiles( ))
+            .pipe($.newer('dist/libraries.js'))
             .pipe(gulpfilter('**/*.js'))
             .pipe(uglify().on('error', gutil.log))
             .pipe(concat('libraries.js'))

@@ -8,6 +8,16 @@
     ];
 
     function UserAddressController($scope) {
-        console.log($scope);
+        $scope.collapsed = false;
+        $scope.collapseAddress  = collapseAddress;
+        $scope.expandAddress  = expandAddress;
+
+        function collapseAddress() {
+            $scope.collapsed = true;
+        }
+
+        function expandAddress() {
+            $scope.collapsed = false;
+        }
     }
 }());

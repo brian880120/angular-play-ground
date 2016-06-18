@@ -13,10 +13,11 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~3.0.0",
     "angular": "~1.5.6",
     "angular-ui-router": "~1.0.0-alpha.5",
     "bootstrap": "~3.3.6",
-    "font-awesome": "~4.6.3"
+    "font-awesome": "~4.6.3",
+    "jquery": "~3.0.0",
+    "lodash": "~4.13.1"
   }
 }

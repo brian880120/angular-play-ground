@@ -1,11 +1,12 @@
 <div class="panel panel-primary">
-    <div class="panel-heading">{{user.name}}</div>
-    <div class="panel-body">
+    <div class="panel-heading" data-ng-click="collapse()">{{user.name}}</div>
+    <div class="panel-body" data-ng-if="!collapseState">
         <data-user-address data-user="user"></data-user-address>
         <h4>Friends: </h4>
         <ul>
             <li data-ng-repeat="friend in user.friends">
                 {{friend}}
+                <data-remove-friend data-method="removeFriend(friend)"></data-remove-friend>
             </li>
         </ul>
         <div data-ng-if="user.rank">

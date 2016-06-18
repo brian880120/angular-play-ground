@@ -7,15 +7,12 @@
         return {
             scope: {
                 user: '=',
+                initialCollapsed: '@collapsed'
             },
-            link: link,
             restrict: 'E',
             templateUrl: 'playGround/directives/templates/userInfoCard.template.html',
             controller: 'routerApp.playGround.UserInfoCardController'
         };
-        function link(scope, elem, attrs) {
-            console.log(scope.user);
-        }
     }
 
 }());
