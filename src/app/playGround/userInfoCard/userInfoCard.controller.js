@@ -1,12 +1,12 @@
 (function() {
     'use strict';
     angular.module('routerApp.playGround')
-        .controller('routerApp.playGround.DelayBindController', DelayBindController);
+        .controller('routerApp.playGround.UserInfoCardController', UserInfoCardController);
 
-    DelayBindController.$inject = [
+    UserInfoCardController.$inject = [
         '$timeout'
     ];
-    function DelayBindController($timeout) {
+    function UserInfoCardController($timeout) {
         var vm = this;
         vm.customers = [
             {
@@ -16,7 +16,7 @@
             }
         ];
 
-        vm.user1 = {
+        vm.person1 = {
             name: 'Luke Skywalker',
             address: {
                 street: 'PO Box 123',
@@ -30,7 +30,7 @@
             ],
             level: 0
         };
-        vm.user2 = {
+        vm.person2 = {
             name: 'Han',
             address: {
                 street: 'PO Box 123',
@@ -43,6 +43,16 @@
                 'Chewbacca'
             ],
             level: 1
+        };
+
+        vm.droid1 = {
+            name: 'R2-D2',
+            specifications: {
+                manufacturer: 'Industrial Automaton',
+                type: 'Astromech',
+                productLine: 'R2 series'
+            },
+            level: 0
         };
     }
 }());

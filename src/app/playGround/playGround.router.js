@@ -13,15 +13,16 @@
                 state: StatesConstant.PLAY_GROUND,
                 config: {
                     url: '/playGround',
-                    templateUrl: 'playGround/playGround.template.html'               
+                    templateUrl: 'playGround/playGround.template.html',
+                    controller: 'routerApp.playGround.PlayGroundController as vm'
                 }
             }, {
-                state: StatesConstant.DELAY_BIND,
+                state: StatesConstant.PLAY_GROUND_USERCARD,
                 config: {
                     url: '',
                     views: {
                         'contentPlayground@playGround': {
-                            component: 'delayBind'
+                            component: 'userInfoCard'
                         }
                     }
                 }
@@ -35,6 +36,16 @@
                         }
                     }
                 }
+            }, {
+                state: StatesConstant.PLAY_GROUND_TRANSCLUSION,
+                config: {
+                    url: '',
+                    views: {
+                        'contentPlayground@playGround': {
+                            component: 'transclusion'
+                        }
+                    }
+                }  
             }
         ];
         StatesProvider.configureStates(states);

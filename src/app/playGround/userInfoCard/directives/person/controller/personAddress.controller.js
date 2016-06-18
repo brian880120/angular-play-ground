@@ -1,13 +1,13 @@
 (function() {
     'use strict';
     angular.module('routerApp.playGround')
-        .controller('routerApp.playGround.UserAddressController', UserAddressController);
+        .controller('routerApp.playGround.PersonAddressController', PersonAddressController);
 
-    UserAddressController.$inject = [
+    PersonAddressController.$inject = [
         '$scope'
     ];
 
-    function UserAddressController($scope) {
+    function PersonAddressController($scope) {
         $scope.collapsed = false;
         $scope.collapseAddress  = collapseAddress;
         $scope.expandAddress  = expandAddress;

@@ -1,20 +1,20 @@
 <div class="panel panel-primary">
-    <div class="panel-heading" data-ng-click="collapse()">{{user.name}}</div>
-    <div class="panel-body" data-state-display="user.level red yellow orange white" data-ng-if="!collapseState">
-        <data-user-address data-user="user"></data-user-address>
+    <div class="panel-heading" data-ng-click="collapse()">{{person.name}}</div>
+    <div class="panel-body" data-state-display="person.level red yellow orange white" data-ng-if="!collapseState">
+        <data-person-address data-person="person"></data-person-address>
         <h4>Friends: </h4>
         <ul>
-            <li data-ng-repeat="friend in user.friends">
+            <li data-ng-repeat="friend in person.friends">
                 {{friend}}
                 <data-remove-friend data-method="removeFriend(friend)"></data-remove-friend>
             </li>
         </ul>
-        <div data-ng-if="user.rank">
-            Rank: {{user.rank}}
+        <div data-ng-if="person.rank">
+            Rank: {{person.rank}}
         </div>
         <button class="btn btn-success"
                 data-ng-click="knightMe()"
-                data-ng-if="!user.rank">
+                data-ng-if="!person.rank">
                 Knight Me
         </button>
         <button class="btn btn-info" data-ng-click="nextState()">Next State</button>

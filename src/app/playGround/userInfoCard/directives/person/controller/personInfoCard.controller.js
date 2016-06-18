@@ -1,13 +1,13 @@
 (function() {
     'use strict';
     angular.module('routerApp.playGround')
-        .controller('routerApp.playGround.UserInfoCardController', UserInfoCardController);
+        .controller('routerApp.playGround.PersonInfoCardController', PersonInfoCardController);
 
-    UserInfoCardController.$inject = [
+    PersonInfoCardController.$inject = [
         '$scope'
     ];
 
-    function UserInfoCardController($scope) {
+    function PersonInfoCardController($scope) {
         $scope.collapseState = ($scope.initialCollapsed === 'true');
 
         $scope.knightMe = knightMe;
@@ -19,12 +19,12 @@
         $scope.removeFriend = removeFriend;
 
         function knightMe() {
-            $scope.user.rank = 'test';
+            $scope.person.rank = 'test';
         }
 
         function nextState() {
-            $scope.user.level++;
-            $scope.user.level = $scope.user.level % 4;
+            $scope.person.level++;
+            $scope.person.level = $scope.person.level % 4;
         }
 
         function collapse() {
@@ -32,7 +32,7 @@
         }
 
         function removeFriend(friend) {
-            _.remove($scope.user.friends, function(data) {
+            _.remove($scope.person.friends, function(data) {
                 return _.isEqual(friend, data);
             });
         }

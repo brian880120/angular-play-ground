@@ -6,12 +6,10 @@
     function RemoveFriendDirective() {
         return {
             scope: {
-                user: '=',
-                friend: '@',
                 notifyParent: '&method'
             },
             restrict: 'E',
-            templateUrl: 'playGround/delayBind/directives/templates/removeFriend.template.html',
+            templateUrl: 'playGround/userInfoCard/directives/person/templates/removeFriend.template.html',
             controller: 'routerApp.playGround.RemoveFriendController'
         };
     }
