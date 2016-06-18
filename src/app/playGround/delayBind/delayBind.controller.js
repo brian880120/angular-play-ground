@@ -1,12 +1,12 @@
 (function() {
     'use strict';
     angular.module('routerApp.playGround')
-        .controller('routerApp.playGround.PlayGroundController', PlayGroundController);
+        .controller('routerApp.playGround.DelayBindController', DelayBindController);
 
-    PlayGroundController.$inject = [
+    DelayBindController.$inject = [
         '$timeout'
     ];
-    function PlayGroundController($timeout) {
+    function DelayBindController($timeout) {
         var vm = this;
         vm.customers = [
             {

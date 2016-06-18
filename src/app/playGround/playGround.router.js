@@ -13,13 +13,27 @@
                 state: StatesConstant.PLAY_GROUND,
                 config: {
                     url: '/playGround',
-                    templateUrl: 'playGround/templates/playGround.template.html'               
+                    templateUrl: 'playGround/playGround.template.html'               
                 }
             }, {
                 state: StatesConstant.DELAY_BIND,
                 config: {
                     url: '',
-                    component: 'delayBind'
+                    views: {
+                        'contentPlayground@playGround': {
+                            component: 'delayBind'
+                        }
+                    }
+                }
+            }, {
+                state: StatesConstant.PLAY_GROUND_DECORATOR,
+                config: {
+                    url: '',
+                    views: {
+                        'contentPlayground@playGround': {
+                            component: 'decorator'
+                        }
+                    }
                 }
             }
         ];
