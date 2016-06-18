@@ -27,7 +27,8 @@
                 'Han',
                 'Leia',
                 'Chewbacca'
-            ]
+            ],
+            level: 0
         };
         vm.user2 = {
             name: 'Han',
@@ -40,7 +41,8 @@
                 'Han',
                 'Leia',
                 'Chewbacca'
-            ]
+            ],
+            level: 1
         };
     }
 }());

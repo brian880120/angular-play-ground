@@ -9,7 +9,7 @@
                 user: '='
             },
             restrict: 'E',
-            templateUrl: 'playGround/directives/templates/userAddress.template.html',
+            templateUrl: 'playGround/delayBind/directives/templates/userAddress.template.html',
             controller: 'routerApp.playGround.UserAddressController'
         };
     }

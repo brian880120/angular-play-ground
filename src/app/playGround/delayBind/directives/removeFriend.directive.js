@@ -11,7 +11,7 @@
                 notifyParent: '&method'
             },
             restrict: 'E',
-            templateUrl: 'playGround/directives/templates/removeFriend.template.html',
+            templateUrl: 'playGround/delayBind/directives/templates/removeFriend.template.html',
             controller: 'routerApp.playGround.RemoveFriendController'
         };
     }
