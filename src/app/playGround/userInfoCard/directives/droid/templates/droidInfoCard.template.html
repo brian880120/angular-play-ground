@@ -1,10 +1,6 @@
-<div class="panel panel-primary">
-    <div class="panel-heading" data-ng-click="collapse()">{{droid.name}}</div>
-    <div class="panel-body" data-state-display="droid.level red yellow orange white" data-ng-if="!collapseState">
-        <h4>Specifications:</h4>
-        {{droid.specifications.manufacturer}} -
-        {{droid.specifications.type}} -
-        {{droid.specifications.productLine}}<br />
-        <button class="btn btn-info" data-ng-click="nextState()">Next State</button>
-    </div>
-</div>
+<data-user-panel data-name="{{droid.name}}" data-collapsed="{{initialCollapsed}}" data-level="droid.level">
+    <h4>Specifications:</h4>
+    {{droid.specifications.manufacturer}} -
+    {{droid.specifications.type}} -
+    {{droid.specifications.productLine}}<br />
+</data-user-panel>

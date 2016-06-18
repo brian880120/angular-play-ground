@@ -1,0 +1,15 @@
+<div class="panel panel-primary">
+    <div class="panel-heading" data-ng-click="collapse()">
+        {{name}}
+        <button class="btn btn-xs btn-info"
+                data-ng-click="nextState($event)"
+                style="float: right">
+                Next State
+        </button>
+    </div>
+    <div class="panel-body"
+        data-state-display="level red yellow orange white"
+        data-ng-if="!collapseState"
+        data-ng-transclude>
+    </div>
+</div>

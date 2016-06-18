@@ -8,27 +8,13 @@
     ];
 
     function PersonInfoCardController($scope) {
-        $scope.collapseState = ($scope.initialCollapsed === 'true');
 
         $scope.knightMe = knightMe;
-
-        $scope.nextState = nextState;
-
-        $scope.collapse = collapse;
 
         $scope.removeFriend = removeFriend;
 
         function knightMe() {
             $scope.person.rank = 'test';
-        }
-
-        function nextState() {
-            $scope.person.level++;
-            $scope.person.level = $scope.person.level % 4;
-        }
-
-        function collapse() {
-            $scope.collapseState = !$scope.collapseState
         }
 
         function removeFriend(friend) {
