@@ -1,6 +1,6 @@
 <div class="panel panel-primary">
     <div class="panel-heading" data-ng-click="collapse()">{{user.name}}</div>
-    <div class="panel-body" data-ng-if="!collapseState">
+    <div class="panel-body" data-state-display="user.level red yellow orange white" data-ng-if="!collapseState">
         <data-user-address data-user="user"></data-user-address>
         <h4>Friends: </h4>
         <ul>
@@ -17,6 +17,6 @@
                 data-ng-if="!user.rank">
                 Knight Me
         </button>
-        <button class="btn" data-ng-click="nextState()">Next State</button>
+        <button class="btn btn-info" data-ng-click="nextState()">Next State</button>
     </div>
 </div>

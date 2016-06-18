@@ -12,12 +12,19 @@
 
         $scope.knightMe = knightMe;
 
+        $scope.nextState = nextState;
+
         $scope.collapse = collapse;
 
         $scope.removeFriend = removeFriend;
 
         function knightMe() {
             $scope.user.rank = 'test';
+        }
+
+        function nextState() {
+            $scope.user.level++;
+            $scope.user.level = $scope.user.level % 4;
         }
 
         function collapse() {
