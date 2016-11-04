@@ -10,7 +10,6 @@
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.17.0",
-    "babel-present-es2015": "^6.16.0",
     "browser-sync": "^2.13.0",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
