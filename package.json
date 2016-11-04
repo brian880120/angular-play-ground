@@ -9,12 +9,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.17.0",
     "browser-sync": "^2.13.0",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-angular-templatecache": "^1.8.0",
-    "gulp-babel": "^6.1.2",
     "gulp-batch": "^1.0.5",
     "gulp-clean-css": "^2.0.10",
     "gulp-concat": "^2.6.0",
