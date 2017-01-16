@@ -21,8 +21,14 @@
             },
             {
                 state: StatesConstant.PLAY_GROUND_TRANSCLUSION,
-                text: 'Transclusion'                
+                text: 'Transclusion'
             }
         ];
+    }
+
+    function test() {
+        console.log('test');
+
+        console.log('test');
     }
 }());
