@@ -13,7 +13,8 @@
                 state: StatesConstant.HOME,
                 config: {
                     url: '/home',
-                    templateUrl: 'home/templates/partial-home.template.html'
+                    templateUrl: 'home/templates/partial-home.template.html',
+                    controller: 'routerApp.home.HomeController as vm'
                 }
             }, {
                 state: StatesConstant.HOME_LIST,

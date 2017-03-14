@@ -4,22 +4,48 @@
         .controller('routerApp.home.HomeController', HomeController);
 
     HomeController.$inject = [
+        '$scope',
+        'Upload',
+        '$timeout',
         'routerApp.core.CoreService',
         'routerApp.core.CoreFactory'
     ];
 
-    function HomeController(CoreService, CoreFactory) {
-        var vm = this;
-        vm.test = test;
+    function HomeController($scope, Upload, $timeout, CoreService, CoreFactory) {
+        var vm = this
+        vm.upload = upload;
         vm.dogs = [
             'Bernese',
             'Husky',
             'Goldendoole'
         ];
-        function test() {
-            console.log('in home' + CoreService.getName());
-            CoreService.setName('Bo');
-            console.log('in home' + CoreService.getName());
+
+        function upload(files) {
+            if (_.isEmpty(files)) {
+                return;
+            }
+            _.forEach(files, function(file) {
+                if (!file.$error) {
+                    Upload.upload({
+                        url: 'https://angular-file-upload-cors-srv.appspot.com/upload',
+                        data: {
+                            file: file
+                        }
+                    }).then(function(res) {
+                        $timeout(function() {
+                            console.log(res);
+                        });
+                    }, function(err) {
+                        console.log(err);
+                    }, function(evt) {
+                        console.log(evt);
+                    })
+                }
+            })
         }
+
+        $scope.$watch('vm.files', function() {
+            vm.upload(vm.files);
+        })
     }
 }());

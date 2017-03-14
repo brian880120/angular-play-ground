@@ -21,7 +21,7 @@
                 getStates: getStates
             };
 
-            $urlRouterProvider.otherwise('/#');
+            $urlRouterProvider.otherwise('/home');
 
             function configureStates (states) {
                 states.forEach(function (state) {
