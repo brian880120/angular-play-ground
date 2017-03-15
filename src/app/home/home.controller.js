@@ -27,7 +27,7 @@
             _.forEach(files, function(file) {
                 if (!file.$error) {
                     Upload.upload({
-                        url: 'https://angular-file-upload-cors-srv.appspot.com/upload',
+                        url: 'http://localhost:8081/upload',
                         data: {
                             file: file
                         }
